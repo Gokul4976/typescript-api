@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>contacts</h1>
+    <button type="button" id="addcontact" onclick="addnewContact()">Add Contact</button> &nbsp;&nbsp;
+    <button type="button" id="exportBtn" onclick="exportToCSV()">Export CSV</button> &nbsp;&nbsp;
+    <br><br>
+    <form action="" id="form1">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required><br><br>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone" required><br><br>
+        <label for="date">DOB: </label>
+        <input type="text" name="dob" id="dob" required><br><br>
+        <label for="multiselect">Languages Known: </label>
+        <select name="" id="multiselect" title="Languages Known">
+
+            <option value="Tamil">Tamil</option>
+            <option value="English">English</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Malayalam">Malayalam</option>
+        </select><br><br>
+        <label for="balance">balance:</label>
+        <input type="number" name="balance" id="balance" step="0.01" required><br><br>
+        <label for="fileInput">Photo;</label>
+        <input type="file" name="profilephoto" id="fileInput" required><br><br>
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="reset" id="cancelBtn">Reset</button>
+
+
+    </form>
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>DOB</th>
+                <th>Language</th>
+                <th>Balance</th>
+                <th>Photo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="contactTableBody">
+            <!-- Table rows will be inserted here-->
+        </tbody>
+    </table>
+<script src="crud.js"></script>
+</body>
+
+</html>
